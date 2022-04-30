@@ -12,3 +12,7 @@ nasm -o <目标文件名> <汇编代码>
 ```
 dd if=<二进制文件路径> of=<镜像文件路径> bs=<块大小> count=<块数> conv=notrunc
 ```
+4. 运行镜像
+```
+bochs -f bochsconfig
+```
