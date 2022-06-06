@@ -1,4 +1,8 @@
 # 编译链接内核文件
+export PATH="/usr/local/cross/bin:$PATH"
+echo "current path"
+pwd
+ls
 rm -rf out
 mkdir out
 i686-elf-as boot.s -o out/boot.o
