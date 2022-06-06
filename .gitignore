@@ -3,5 +3,8 @@
 *.log
 *.img
 *.bin
+*.o
+*.iso
 /toolchain/src
 /toolchain/build
+isodir
