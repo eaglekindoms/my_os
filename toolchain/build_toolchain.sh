@@ -83,7 +83,7 @@ main() {
     cd ../.. # toolchain/
     # build binutils&gcc
     cd build
-    build_binutils 
+    build_binutils
     build_gcc
 }
 
