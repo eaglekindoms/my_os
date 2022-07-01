@@ -4,4 +4,4 @@ project(my_os C)
 set(CMAKE_C_STANDARD 99)
 
 add_subdirectory(test)
-add_subdirectory(osdev_Bare_Bones)
+add_subdirectory(src)
