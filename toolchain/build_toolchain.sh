@@ -21,7 +21,7 @@ download_src() {
     gcc="gcc-$gcc_version.tar.xz"
     # download "https://mirrors.tuna.tsinghua.edu.cn/gnu/gcc/gcc-$gcc_version/$gcc" "$gcc"
     binutils_version="2.34"
-    binutils="binutils-$version.tar.xz"
+    binutils="binutils-$binutils_version.tar.xz"
     # download "https://ftp.gnu.org/gnu/binutils/$binutils" "$binutils"
     export binutils_src="$PWD/binutils-$binutils_version"
     export gcc_src="$PWD/gcc-$gcc_version"

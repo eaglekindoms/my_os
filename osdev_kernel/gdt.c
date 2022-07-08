@@ -5,6 +5,7 @@
 *  Notes: No warranty expressed or implied. Use at own risk. */
 #include <system.h>
 
+// __attribute__((packed)) 修饰struct, union, enum 使内部成员变量紧靠在一起
 /* Defines a GDT entry */
 struct gdt_entry
 {

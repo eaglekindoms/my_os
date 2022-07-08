@@ -6,8 +6,9 @@ ls
 rm -rf out
 mkdir out
 i686-elf-as boot/boot.s -o out/boot.o
-i686-elf-gcc -c kernel/kernel.c -o out/kernel.o -std=gnu99 -ffreestanding -O2 -Wall -Wextra
-i686-elf-gcc -T config/linker.ld -o out/myos.bin -ffreestanding -O2 -nostdlib out/boot.o out/kernel.o -lgcc
+i686-elf-gcc -c kernel/kernel.c -o out/kernel.o -std=gnu99 -ffreestanding -O2 -Wall -Wextra -I./include
+i686-elf-gcc -c kernel/printf.c -o out/printf.o -std=gnu99 -ffreestanding -O2 -Wall -Wextra -I./include
+i686-elf-gcc -T config/linker.ld -o out/myos.bin -ffreestanding -O2 -nostdlib out/boot.o out/kernel.o out/printf.o -lgcc
 
 # 验证内核文件
 if grub-file --is-x86-multiboot out/myos.bin; then
@@ -24,4 +25,4 @@ cp config/grub.cfg isodir/boot/grub/grub.cfg
 grub-mkrescue -o myos.iso isodir
 
 # run
-qemu-system-i386 -cdrom myos.iso
+qemu-system-i386 -kernel out/myos.bin
