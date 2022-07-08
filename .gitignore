@@ -10,3 +10,5 @@
 /toolchain/src
 /toolchain/build
 isodir
+/tilck-master
+.vscode
