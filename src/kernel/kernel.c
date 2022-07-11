@@ -17,7 +17,12 @@ void kernel_main(void)
 	// /* Initialize terminal interface */
 	terminal_initialize();
 	_putchar('h');
-	printf("hello, world, %d",9527);
+	for (int i=1 ; i < 80; i++)
+	{
+		_putchar(' ');
+	}
+	
+	printf("hello, world! \n%d",9527);
  
 	// /* Newline support is left as an exercise. */
 	// terminal_writestring("Hello, kernel World!\n");
